@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Car</title>
+</head>
+<body>
+    <h2>Delete Car</h2>
+    <form method="post" action="{% url 'delete_car_url' %}">
+        {% csrf_token %}
+        <label for="car_id_delete">Car ID:</label>
+        <input type="text" id="car_id_delete" name="car_id_delete" required>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Sales System</title>
+</head>
+<body>
+    <h2>Update Car</h2>
+    <form method="post" action="{% url 'update_car_url' %}">
+        {% csrf_token %}
+        <label for="car_id">Car ID:</label>
+        <input type="text" id="car_id" name="car_id" required>
+        <label for="new_price">New Price:</label>
+        <input type="text" id="new_price" name="new_price" required>
+        <button type="submit">Update</button>
+    </form>
+
+    <h2>Delete Bought Car</h2>
+    <form method="post" action="{% url 'delete_car_url' %}">
+        {% csrf_token %}
+        <label for="car_id_delete">Car ID:</label>
+        <input type="text" id="car_id_delete" name="car_id_delete" required>
+        <button type="submit">Delete</button>
+    </form>
+
+    <h2>Car Specifications</h2>
+    <form method="get" action="{% url 'car_specs_url' %}">
+        <label for="car_id_specs">Car ID:</label>
+        <input type="text" id="car_id_specs" name="car_id_specs" required>
+        <button type="submit">Get Specifications</button>
+    </form>
+
+    {% if car_specs %}
+        <h3>Car Specifications:</h3>
+        <ul>
+            <li><strong>Make:</strong> {{ car_specs.make }}</li>
+            <li><strong>Model:</strong> {{ car_specs.model }}</li>
+            <li><strong>Year:</strong> {{ car_specs.year }}</li>
+            <li><strong>price:</strong> {{ car_specs.price}}</li>
+        </ul>
+    {% endif %}
+
+
+
+</body>
+</html>

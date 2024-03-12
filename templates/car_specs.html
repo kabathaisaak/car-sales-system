@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Specifications</title>
+</head>
+<body>
+    <h2>Car Specifications</h2>
+    <form method="get" action="{% url 'car_specs_url' %}">
+        <label for="car_id_specs">Car ID:</label>
+        <input type="text" id="car_id_specs" name="car_id_specs" required>
+        <button type="submit">Get Specifications</button>
+    </form>
+
+    {% if car_specs %}
+        <h3>Car Specifications:</h3>
+        <ul>
+            <li><strong>Make:</strong> {{ car_specs.make }}</li>
+            <li><strong>Model:</strong> {{ car_specs.model }}</li>
+            <li><strong>Year:</strong> {{ car_specs.year }}</li>
+            <li><strong>Price:</strong> ${{ car_specs.price }}</li>
+            <!-- Add other fields as needed -->
+        </ul>
+    {% endif %}
+
+    <!-- Add other HTML content as needed -->
+</body>
+</html>

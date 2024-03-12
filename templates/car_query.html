@@ -1,0 +1,20 @@
+<!-- car_query.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Query</title>
+</head>
+<body>
+
+<h1>Car Query Form</h1>
+
+<form method="post" action="{% url 'car_query_view' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Query</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/carsystem bg.jpeg' %}" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  <style>
+    body {
+      background-image: url({% static 'assets/img/carsystem bg.jpeg' %});
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body class="bg-dark">
+  <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+    <div class="row gx-0">
+      <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+        <div class="d-inline-flex align-items-center" style="height: 75px;">
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center text-lg-center">
+        <div class="d-inline-flex align-items-center" style="height: 60px;">
+          <a href="{% url 'register' %}"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Register</small></a>
+          <a href="{% url 'login' %}"><small class="me-3 text-light"><i class="fa fa-sign-in-alt me-2"></i>Login</small></a>
+          <a href="{% url 'about' %}"><small class="me-3 text-light"><i class="fa fa-info-circle me-2"></i>About</small></a>
+          <a href="{% url 'car_list' %}"><small class="me-3 text-light"><i class="fa fa-info-circle me-2"></i>vehicles</small></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Section -->
+  <header class="bg-light text-center py-5">
+    <div class="container bg-info">
+      <h1 class="display-4 text-center">Welcome to the Ultimate Car Sales System</h1>
+      <p class="lead">Efficiently manage your car sales and inventory with our system.</p>
+      <a href="{% url 'about' %}" class="btn btn-primary btn-lg">Learn More</a>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <section class="container my-5">
+    <h2 class="mb-4">Key Features</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card bg-info">
+          <div class="card-body">
+            <h5 class="card-title text-info">Inventory Management</h5>
+            <p class="card-text">Easily add, edit, and view details of your car inventory.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-info">
+          <div class="card-body">
+            <h5 class="card-title text-info">Sales Dashboard</h5>
+            <p class="card-text">Monitor sales, track payments, and analyze performance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-info">Customer Management</h5>
+            <p class="card-text">Manage customer information and preferences for personalized service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <title>About  our Car Sales System</title>     <nav>
+    </nav>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+             background-image: url({% static 'assets/img/carsystem bg.jpeg' %});
+             background-size: cover;
+        }
+        header {
+            background-color: #5eff00;
+            padding: 10px;
+            color: #c711da;
+            text-align: center;
+            z-index: 1;
+            position: fixed;
+            width: 100%;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <header>
+        <h1>About Car Sales System</h1>
+
+    </header>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide ">
+                <div class="slide-content">
+                    <h2>Welcome to Car Sales System</h2>
+                    <p class="text-danger">
+                        Car Sales System is a premier online platform designed to provide an immersive and user-friendly
+                        experience for individuals in search of their dream cars. Our mission is to simplify the car buying
+                        process by offering comprehensive details about a wide array of vehicles, ensuring you make an
+                        informed decision.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide ">
+                <div class="slide-content">
+                    <h2>Explore Our Extensive Collection</h2>
+                    <br>
+                    <p class="text-danger">
+                        Explore our extensive collection of cars, ranging from the latest models to timeless classics. Each
+                        car listing includes essential information such as make, model, year, pricing details, and
+                        high-quality images to give you a glimpse of the vehicle's aesthetic appeal.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide ">
+                <div class="slide-content">
+                    <h2>For Enthusiasts and First-Time Buyers</h2>
+                    <br>
+                    <p class="text-danger">
+                        Whether you are a seasoned car enthusiast or a first-time buyer, Car Sales System is here to cater
+                        to your automotive needs. Our platform is committed to delivering transparency, reliability, and
+                        convenience in your journey to find the perfect vehicle.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide ">
+                <div class="slide-content">
+                    <h2>Seamless Experience</h2>
+                    <br>
+                    <p class="text-danger">
+                        At Car Sales System, we understand that buying a car is a significant decision. That's why we go
+                        the extra mile to provide a seamless experience. Feel free to utilize our search functionality,
+                        explore the diverse options available, and reach out to us for any inquiries or assistance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide ">
+                <div class="slide-content">
+                    <h2>Thank You for Choosing Us</h2>
+                    <br>
+                    <p class="text-danger">
+                        Thank you for choosing Car Sales System. We look forward to being a part of your exciting car-buying
+                        adventure!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

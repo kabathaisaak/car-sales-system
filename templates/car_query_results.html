@@ -1,0 +1,24 @@
+<!-- car_query_results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Query Results</title>
+</head>
+<body>
+
+<h1>Car Query Results</h1>
+
+{% if cars %}
+    <ul>
+        {% for car in cars %}
+            <li>{{ car.make }} {{ car.model }} ({{ car.year }}) - {{ car.price }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No cars found.</p>
+{% endif %}
+
+</body>
+</html>
